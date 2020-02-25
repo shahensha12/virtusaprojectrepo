@@ -45,8 +45,8 @@ public class NumberToWordControllerTest {
 		.perform(get("/numbertowordmapping/{number}").content(MediaType.APPLICATION_JSON_VALUE))
 		.andExpect(status().isOk()).andReturn();
 		
-		String resultcontent = result.getResponse().getContentAsString();
-		Response response = om.readValue(resultcontent,Response.class);
+		int resultcontent = result.getResponse().getStatus();
+		Response response = om.readValue(resultcontent.toString(),Response.class);
 		Assert.assertTrue(response.getStatus()==200);
 	}
 }

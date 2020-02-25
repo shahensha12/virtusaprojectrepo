@@ -25,17 +25,17 @@ public class NumberToWordController  {
 		}
     }
 		
-	@ExceptionHandler(NumberFormatException.class)
-	public String exceptionHandler(NumberFormatException n) {
-		
-		return "Enter value in valid Number Format";
-	}
-	@ExceptionHandler(NullPointerException.class)
-	public String nullexceptionHandler(NullPointerException n) {
-		
-		return "null value";
-	}
-	
+//	@ExceptionHandler(NumberFormatException.class)
+//	public String exceptionHandler(NumberFormatException n) {
+//		
+//		return "Enter value in valid Number Format";
+//	}
+//	@ExceptionHandler(NullPointerException.class)
+//	public String nullexceptionHandler(NullPointerException n) {
+//		
+//		return "null value";
+//	}
+//	
     @GetMapping
     public String health() {
         return "alive";
